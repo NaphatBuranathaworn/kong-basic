@@ -1,0 +1,18 @@
+_format_version: "3.0"
+_transform: true
+
+services:
+- name: my-service
+  url: https://api.coingecko.com
+  plugins:
+  - name: key-auth
+  routes:
+  - name: my-route
+    paths:
+    - /api/v3/coins/markets
+    strip_path: false
+
+consumers:
+- username: my-user
+  keyauth_credentials:
+  - key: my-key
