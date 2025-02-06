@@ -6,6 +6,9 @@ services:
   url: https://api.coingecko.com
   plugins:
   - name: key-auth
+    config:
+      key_names:
+      - x-api-key
   routes:
   - name: my-route
     paths:
